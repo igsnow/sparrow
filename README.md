@@ -1,0 +1,2 @@
+# mydj
+django博客
