@@ -21,6 +21,7 @@ class QuestionAdmin(admin.ModelAdmin):
     list_filter = ['pub_date']
     # 添加搜索框
     search_fields = ['question_text']
+    list_per_page = 8
 
 
 admin.site.register(Question, QuestionAdmin)
