@@ -44,6 +44,10 @@ class DetailView(generic.DetailView):
     model = Question
     template_name = 'polls/detail.html'
 
+    def get_queryset(self):
+        # 增加约束，虽然未来投票不会再index里出现，防止用户通过测试url访问它们
+        return Question.objects.filter(pub_date__lte=timezone.now())
+
 
 def results(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
