@@ -19,6 +19,11 @@ class Question(models.Model):
         # 只有当日期是过去式的时候才能返回True
         return now - datetime.timedelta(days=1) <= self.pub_date <= now
 
+    was_published_recently.admin_order_field = 'pub_date'
+    was_published_recently.boolean = True
+    # 改变列的标题
+    was_published_recently.short_description = 'Published recently?'
+
 
 class Choice(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
