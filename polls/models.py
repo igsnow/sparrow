@@ -13,7 +13,11 @@ class Question(models.Model):
         return self.question_text
 
     def was_published_recently(self):
-        return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
+        # 这是个bug
+        # return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
+        now = timezone.now()
+        # 只有当日期是过去式的时候才能返回True
+        return now - datetime.timedelta(days=1) <= self.pub_date <= now
 
 
 class Choice(models.Model):
