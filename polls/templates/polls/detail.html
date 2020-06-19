@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>技能列表</title>
+    <title>技能</title>
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
 </head>
@@ -17,6 +17,9 @@
         <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
         <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
     {% endfor %}
+
+    <a href="{% url 'polls:index' %}">Back</a>
+
     <input id="submitBtn" type="submit" value="Vote">
 </form>
 </body>
