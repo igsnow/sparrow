@@ -1,3 +1,33 @@
+body {
+    padding: 20px;
+}
+
+.title {
+    /*padding: 10px;*/
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 li a {
     color: green;
+}
+
+.skillName {
+    display: inline-block;
+    width: 70px;
+}
+
+#submitBtn {
+    margin: 20px;
+    padding: 5px 10px 5px;
+    cursor: pointer;
+}
+
+#voteAgainBtn {
+    display: inline-block;
+    margin-top: 15px;
 }

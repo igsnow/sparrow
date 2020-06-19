@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>职业列表</title>
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
 </head>
 <body>
+<h3 class="title">门派</h3>
 {% if latest_question_list %}
     <ul>
         {% for question in latest_question_list %}
