@@ -142,6 +142,7 @@ cython_debug/
 
 # Editor
 .idea
+.vscode
 
 Pipfile.lock
 
